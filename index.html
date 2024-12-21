@@ -6,6 +6,24 @@
   <title>MohammadPouya Toroghi - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+  
+  	.social-media {
+  		margin-top: 20px;
+	}
+
+	.social-media a {
+  		color: white;
+  		font-size: 30px;
+  		margin: 0 20px; /* Increased spacing between icons */
+  		display: inline-block;
+  		transition: transform 0.3s ease-in-out;
+	}
+
+	.social-media a:hover {
+  		color: #00f2fe; /* Highlight color on hover */
+  		transform: scale(1.3); /* Slightly enlarge on hover */
+	}
+
     /* General Styles */
     body {
       font-family: Arial, sans-serif;
@@ -162,21 +180,25 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <div class="dropdown">
-      <button class="dropbtn">More <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-content">
-        <a href="#skills">Skills</a>
-        <a href="#testimonials">Testimonials</a>
-      </div>
-    </div>
+    <a href="#skills">Skills</a>
+    <a href="#testimonials">Testimonials</a>
   </div>
 </div>
 
 <!-- Hero Section -->
 <div class="hero" id="home">
   <h1>MohammadPouya Toroghi</h1>
-  <p>Welcome to my portfolio. Explore my work, skills, and achievements.</p>
+  <p>Connect with me:</p>
+  <div class="social-media">
+    <a href="https://t.me/PouyaToroghi" target="_blank"><i class="fa fa-telegram"></i></a>
+    <a href="https://linkedin.com/in/pouyatoroghi" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <!-- <a href="https://scholar.google.com/citations?user=yourgoogleid" target="_blank"><i class="fa fa-graduation-cap"></i></a> -->
+    <a href="https://github.com/pouyatoroghi" target="_blank"><i class="fa fa-github"></i></a>
+    <!--<a href="https://twitter.com/yourtwitterusername" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://instagram.com/yourinstagramusername" target="_blank"><i class="fa fa-instagram"></i></a>-->
+  </div>
 </div>
+
 
 <!-- About Section -->
 <section id="about">

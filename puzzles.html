@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Puzzles | Mohammad Pouya Toroghi</title>
+  <meta name="description" content="Three mathematical puzzles about minimax inference, calibrated forecasts, and sequential testing, with hints and complete solutions.">
+  <link rel="canonical" href="https://pouyatoroghi.github.io/puzzles.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Puzzles | Mohammad Pouya Toroghi">
+  <meta property="og:description" content="Three mathematical puzzles about minimax inference, calibrated forecasts, and sequential testing, with hints and complete solutions.">
+  <meta property="og:url" content="https://pouyatoroghi.github.io/puzzles.html">
+  <meta property="og:image" content="https://pouyatoroghi.github.io/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mohammad Pouya Toroghi, M.Sc. student, Sharif University of Technology.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="background.html">Background</a>
+        <a href="puzzles.html" aria-current="page">Puzzles</a>
+        <a href="question.html">Question</a>
+      </nav>
+      <div class="header-tools">
+        <a class="header-cv" href="assets/CV_Toroghi_Oct2026.pdf">Curriculum vitae <span class="file-type">PDF</span></a>
+        <div class="theme-switch" role="group" aria-label="Color theme" hidden>
+          <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-intro" aria-labelledby="page-title">
+        <p class="page-owner"><a href="index.html">Mohammad Pouya Toroghi</a></p>
+        <h1 id="page-title">Puzzles</h1>
+        <div class="page-lead"><p>A small collection of problems about information, prediction, and uncertainty. These are exercises in established mathematics, with hints and worked solutions collected below.</p></div>
+      </section>
+      <article class="puzzle" id="queries">
+        <h2>1. How many queries buy confidence?</h2>
+        <p class="puzzle-topic">Inference · Minimax risk</p>
+        <p>A deterministic binary oracle accepts one of <var>N</var> ≥ 2 inputs. It is either <strong>clean</strong>, returning zero everywhere, or <strong>marked</strong>, returning one at exactly one unknown input.</p>
+        <p>You may query at most <var>q</var> distinct inputs, where 0 ≤ <var>q</var> ≤ <var>N</var>, then declare “clean” or “marked.” Both your queries and your decision may be randomized and adaptive.</p>
+        <p>What is the smallest achievable <strong>worst-case probability of error</strong>, taking the worst case over the clean oracle and all <var>N</var> possible marked oracles?</p>
+        <details><summary>Hint</summary><div class="puzzle-answer"><p>Follow the all-zero transcript. Missing the marked input does not necessarily mean you must declare “clean.”</p></div></details>
+        <details><summary>Solution</summary><div class="puzzle-answer">
+          <p>The optimal risk is</p>
+          <p class="equation"><var>r</var>* = (<var>N</var> − <var>q</var>) / (2<var>N</var> − <var>q</var>).</p>
+          <p>To attain it, sample a uniformly random set of <var>q</var> inputs. If any answer is one, report “marked.” Otherwise, report “marked” with probability <var>r</var>*.</p>
+          <p>The clean oracle is misclassified with probability <var>r</var>*. For every marked oracle, the marked input is missed with probability (<var>N</var> − <var>q</var>)/<var>N</var>. The error probability is therefore</p>
+          <p class="equation">[(<var>N</var> − <var>q</var>) / <var>N</var>] (1 − <var>r</var>*) = <var>r</var>*.</p>
+          <p>For the lower bound, consider any randomized strategy. Let <var>α</var> be its probability of reporting “marked” on the clean oracle, and include all randomness, including its final decision, in a single random seed.</p>
+          <p>For each seed on which it reports “clean,” at least <var>N</var> − <var>q</var> marked inputs lie outside its clean-oracle query set. Coupling a marked run to the same seed gives identical zero answers, adaptive queries, and final decision whenever the marked input is outside that set. Averaging over seeds and uniformly over marked inputs therefore gives an error of at least [(<var>N</var> − <var>q</var>)/<var>N</var>](1 − <var>α</var>).</p>
+          <p>The worst-case error is consequently at least the larger of <var>α</var> and [(<var>N</var> − <var>q</var>)/<var>N</var>](1 − <var>α</var>). Balancing these two terms gives <var>α</var> = <var>r</var>* and proves optimality.</p>
+          <p>Except when every input can be queried, an optimal minimax detector deliberately accepts some false positives.</p>
+        </div></details>
+      </article>
+      <article class="puzzle" id="forecasts">
+        <h2>2. Can two calibrated forecasts spoil each other?</h2>
+        <p class="puzzle-topic">Probability · Calibration</p>
+        <p>Let <var>Y</var> ∈ {0, 1} be an outcome and <var>P</var>, <var>Q</var> ∈ [0, 1] two probabilistic forecasts for it. Both are perfectly calibrated:</p>
+        <p class="equation">E[<var>Y</var> | <var>P</var>] = <var>P</var>, &nbsp; E[<var>Y</var> | <var>Q</var>] = <var>Q</var>.</p>
+        <p>For a fixed weight 0 &lt; <var>λ</var> &lt; 1, form the average <var>R</var> = <var>λP</var> + (1 − <var>λ</var>)<var>Q</var>.</p>
+        <p>Without any independence assumptions, when is <var>R</var> also perfectly calibrated?</p>
+        <details><summary>Hint</summary><div class="puzzle-answer"><p>Calibration implies E[<var>YP</var>] = E[<var>P</var><sup>2</sup>]. Compare E[<var>YR</var>] with E[<var>R</var><sup>2</sup>].</p></div></details>
+        <details><summary>Solution</summary><div class="puzzle-answer">
+          <p>The average is calibrated <strong>if and only if <var>P</var> = <var>Q</var> almost surely</strong>.</p>
+          <p>Individual calibration gives</p>
+          <p class="equation">E[<var>YR</var>] = <var>λ</var>E[<var>P</var><sup>2</sup>] + (1 − <var>λ</var>)E[<var>Q</var><sup>2</sup>].</p>
+          <p>Expanding <var>R</var><sup>2</sup> and subtracting yields</p>
+          <p class="equation">E[<var>R</var>(<var>Y</var> − <var>R</var>)] = <var>λ</var>(1 − <var>λ</var>) E[(<var>P</var> − <var>Q</var>)<sup>2</sup>].</p>
+          <p>If <var>R</var> is calibrated, conditioning on <var>R</var> makes the left-hand side zero. Since <var>λ</var>(1 − <var>λ</var>) &gt; 0, this forces <var>P</var> = <var>Q</var> almost surely. Conversely, if the forecasts agree almost surely, their average equals either calibrated forecast.</p>
+          <p>For example, take a fair binary outcome, the perfect forecast <var>P</var> = <var>Y</var>, and the constant forecast <var>Q</var> = 1/2. Both are calibrated. Their equal-weight average predicts 1/4 when the outcome is always zero, and 3/4 when it is always one.</p>
+          <p>Exact calibration is not preserved by ordinary weighted averaging.</p>
+        </div></details>
+      </article>
+      <article class="puzzle" id="monitoring">
+        <h2>3. A test you can watch forever</h2>
+        <p class="puzzle-topic">Sequential inference · Martingales</p>
+        <p>Independent fair coin flips give <var>X</var><sub>t</sub> ∈ {−1, +1}. Begin with wealth <var>W</var><sub>0</sub> = 1. Before each flip, choose <var>f</var><sub>t</sub> ∈ [−1, 1] using only previous flips, then update</p>
+        <p class="equation"><var>W</var><sub>t</sub> = <var>W</var><sub>t−1</sub>(1 + <var>f</var><sub>t</sub><var>X</var><sub>t</sub>).</p>
+        <p>You declare an alarm whenever wealth reaches or exceeds 100. There is no time limit, and your betting strategy may change after every observation.</p>
+        <p>What is the <strong>largest possible probability</strong> of ever declaring an alarm?</p>
+        <details><summary>Hint</summary><div class="puzzle-answer"><p>Stop at the alarm or at a fixed finite horizon, whichever comes first. For sharpness, try betting one unit while you can.</p></div></details>
+        <details><summary>Solution</summary><div class="puzzle-answer">
+          <p>The exact answer is <strong>1/100</strong>.</p>
+          <p>Wealth is nonnegative, and E[<var>W</var><sub>t</sub> | <var>X</var><sub>1</sub>, …, <var>X</var><sub>t−1</sub>] = <var>W</var><sub>t−1</sub>, so it is a martingale. Let <var>τ</var> be the first alarm time. For every finite <var>n</var>, bounded stopping gives</p>
+          <p class="equation">1 = E[<var>W</var><sub>min(τ,n)</sub>] ≥ 100 Pr(<var>τ</var> ≤ <var>n</var>).</p>
+          <p>Letting <var>n</var> increase proves Pr(<var>τ</var> &lt; ∞) ≤ 1/100.</p>
+          <p>To attain the bound, whenever wealth is an integer <var>j</var> ∈ {1, …, 99}, choose <var>f</var><sub>t</sub> = 1/<var>j</var>. Wealth moves to <var>j</var> + 1 or <var>j</var> − 1 with equal probability. Stop betting at zero or 100.</p>
+          <p>This random walk reaches a boundary almost surely: a block of 100 consecutive positive flips forces absorption, and independent blocks eventually contain such a run. Its probability <var>h</var><sub>j</sub> of reaching 100 first satisfies</p>
+          <p class="equation"><var>h</var><sub>0</sub> = 0, &nbsp; <var>h</var><sub>100</sub> = 1,<br><var>h</var><sub>j</sub> = (<var>h</var><sub>j−1</sub> + <var>h</var><sub>j+1</sub>) / 2.</p>
+          <p>Thus <var>h</var><sub>j</sub> = <var>j</var>/100, giving an alarm probability of exactly 1/100 from initial wealth one.</p>
+          <p>The upper bound is an instance of Ville's inequality; the sharpness construction is the classical gambler's ruin problem. For a modern treatment of the inequality and its role in sequential inference, see <a href="https://arxiv.org/abs/1808.03204">Howard et al., Time-uniform Chernoff bounds via nonnegative supermartingales</a>.</p>
+        </div></details>
+      </article>
+    </main>
+    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated October 2026</p><a href="question.html">The research question <span aria-hidden="true">→</span></a></footer>
+  </div>
+</body>
+</html>

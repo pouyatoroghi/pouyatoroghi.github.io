@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><style>
+    @font-face { font-family: SourceSans; src: url('fonts/source-sans-3.woff2'); }
+    @font-face { font-family: SourceSerif; src: url('fonts/source-serif-4.woff2'); }
+  </style></defs>
+  <rect width="1200" height="630" fill="#fff"/>
+  <path d="M80 101H1120M80 536H1120" stroke="#e1e6eb"/>
+  <text x="80" y="66" fill="#275e97" font-family="SourceSans,Arial,sans-serif" font-size="19">pouyatoroghi.github.io</text>
+  <text x="78" y="220" fill="#172432" font-family="SourceSerif,Georgia,serif" font-size="53" letter-spacing="-1.8">Mohammad Pouya Toroghi</text>
+  <g fill="#626c77" font-family="SourceSans,Arial,sans-serif" font-size="23">
+    <text x="80" y="267">M.Sc. student in Computer Engineering</text>
+    <text x="80" y="303">Sharif University of Technology</text>
+  </g>
+  <g fill="#28313b" font-family="SourceSans,Arial,sans-serif" font-size="25">
+    <text x="80" y="388">Trustworthy machine learning</text>
+    <text x="80" y="430">LLM security, semantic calibration, and machine unlearning</text>
+  </g>
+  <text x="80" y="580" fill="#275e97" font-family="SourceSans,Arial,sans-serif" font-size="19">toroghipouya@gmail.com</text>
+</svg>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Research Questions | Mohammad Pouya Toroghi</title>
+  <meta name="description" content="Questions I want to study during a PhD: reasoning as search, calibrated intermediate evaluation, and how systems decide where to spend computation.">
+  <link rel="canonical" href="https://pouyatoroghi.github.io/question.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research Questions | Mohammad Pouya Toroghi">
+  <meta property="og:description" content="Questions I want to study during a PhD: reasoning as search, calibrated intermediate evaluation, and how systems decide where to spend computation.">
+  <meta property="og:url" content="https://pouyatoroghi.github.io/question.html">
+  <meta property="og:image" content="https://pouyatoroghi.github.io/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mohammad Pouya Toroghi, M.Sc. student, Sharif University of Technology.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="background.html">Background</a>
+        <a href="puzzles.html">Puzzles</a>
+        <a href="question.html" aria-current="page">Question</a>
+      </nav>
+      <div class="header-tools">
+        <a class="header-cv" href="assets/CV_Toroghi_Oct2026.pdf">Curriculum vitae <span class="file-type">PDF</span></a>
+        <div class="theme-switch" role="group" aria-label="Color theme" hidden>
+          <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-intro" aria-labelledby="page-title">
+        <p class="page-owner"><a href="index.html">Mohammad Pouya Toroghi</a></p>
+        <h1 id="page-title" class="question-title">Questions I want to work on</h1>
+        <p class="entry-context">Research interests for doctoral study</p>
+        <div class="page-lead"><p>Contributing to artificial general intelligence is my long-term ambition. The question that most draws me is how a system can assess its reasoning while it is still searching for a solution. I view reasoning as a search process, and want to study when calibrated judgments of intermediate states improve the search itself.</p></div>
+        <blockquote class="central-question">When does calibrated assessment of intermediate reasoning make search more reliable?</blockquote>
+      </section>
+      <section class="reading-section" aria-labelledby="step-title">
+        <h2 id="step-title">The perspective I want to explore</h2>
+        <p>I am interested in the distinction between judging a step's local validity and estimating the chance of reaching a solution from it. That chance depends on the continuation policy, available computation, and the criterion for success. For such estimates, calibration would mean agreement between predicted probabilities and observed success frequencies under specified conditions.</p>
+        <p>I want to understand how this agreement changes as search selects new states or the task distribution shifts. Whether improved calibration leads to better search decisions is an open question I want to study alongside candidate generation and reliable verification. Passing program tests, for instance, need not establish full correctness.</p>
+      </section>
+      <section class="reading-section" aria-labelledby="compute-title">
+        <h2 id="compute-title">An open question about computation</h2>
+        <p>I am also interested in how a system decides whether further reasoning is worth its cost. A branch's chance of success and the expected benefit of spending more computation on it are different quantities. I would like to understand when intermediate assessments help allocate effort, and when their errors instead misdirect it.</p>
+      </section>
+      <section class="reading-section" aria-labelledby="connection-title">
+        <h2 id="connection-title">Why this connects to my work</h2>
+        <p>My <a href="research.html#calibration">semantic-calibration research</a> examines confidence in long-form generation with limited fine-tuning data and distribution shift. It motivates my interest in extending response-level evaluation to intermediate reasoning.</p>
+        <p>My <a href="research.html#backdoors">white-box backdoor-detection research</a> brings a related interest in understanding hidden failure modes. Through reinforcement learning implementations and <a href="projects.html">program synthesis and neuro-symbolic projects</a>, I have worked with value estimation, search, and execution-based evaluation. My undergraduate unlearning research also gave me experience assessing methods across utility, privacy, and security.</p>
+      </section>
+      <section class="reading-section" aria-labelledby="investigation-title">
+        <h2 id="investigation-title">What I hope to develop during a PhD</h2>
+        <p>During a PhD, I want to connect these questions through theoretical and empirical work on reasoning, learning, and uncertainty. My immediate aim is to understand the conditions under which intermediate evaluation helps a system reason, including where it fails. That is the part of the broader problem of general intelligence I want to begin with.</p>
+      </section>
+      <section class="reading-section related-reading" aria-labelledby="reading-title">
+        <h2 id="reading-title">Related reading</h2>
+        <p>Some relevant work I hope to build on:</p>
+        <ul>
+          <li>Yao et al. (2023). <a href="https://arxiv.org/abs/2305.10601">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</a>. Search over intermediate reasoning states.</li>
+          <li>Lightman et al. (2023). <a href="https://arxiv.org/abs/2305.20050">Let's Verify Step by Step</a>. Supervision of intermediate reasoning steps.</li>
+          <li>Guo et al. (2017). <a href="https://proceedings.mlr.press/v70/guo17a.html">On Calibration of Modern Neural Networks</a>. Probability calibration and empirical evaluation.</li>
+          <li>Hay et al. (2012). <a href="https://arxiv.org/abs/1207.5879">Selecting Computations: Theory and Applications</a>. Selecting computations by their expected value.</li>
+        </ul>
+      </section>
+    </main>
+    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated October 2026</p><a href="research.html">Current research <span aria-hidden="true">→</span></a></footer>
+  </div>
+</body>
+</html>

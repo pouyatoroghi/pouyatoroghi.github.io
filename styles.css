@@ -71,7 +71,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 nav { display: flex; flex-wrap: wrap; gap: 8px 30px; }
 nav a, .header-cv { display: inline-flex; align-items: center; min-height: 40px; text-decoration: none; }
 nav a { color: var(--muted); border-bottom: 2px solid transparent; }
-nav a[aria-current="page"] { color: var(--blue); border-bottom-color: var(--blue); font-weight: 600; }
+nav a[aria-current] { color: var(--blue); border-bottom-color: var(--blue); font-weight: 600; }
 nav a:hover { color: var(--blue); }
 .header-cv { gap: 9px; }
 .header-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; }
@@ -177,6 +177,22 @@ var { font-family: var(--serif); }
 .puzzle-answer { border-left: 2px solid var(--line); padding-left: 20px; margin: 4px 0 18px; }
 .puzzle-answer p + p { margin-top: 14px; }
 .puzzle-answer .equation { margin-block: 16px; }
+.note-kind { color: var(--muted); font-size: .86rem; margin-top: 14px; }
+.note-page h1 { max-width: var(--reading-width); }
+.note-page .reading-section { margin-top: 36px; }
+.note-page .reading-section h2 { font-size: 1.4rem; }
+.note-page .reading-section h3 { margin: 26px 0 12px; font-size: 1.08rem; }
+.note-page .math-display { max-width: 100%; overflow-x: auto; padding-block: 4px; }
+.note-page .math-display:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+.note-page .page-owner > span { padding-inline: 8px; color: var(--muted); }
+.note-entry { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 16px; padding-top: 24px; max-width: var(--reading-width); }
+.note-entry + .note-entry { margin-top: 24px; border-top: 1px solid var(--line); }
+.note-number { color: var(--muted); font: 400 1.2rem/1.4 var(--serif); }
+.note-entry h3 { font-size: 1.2rem; }
+.note-entry p:not(.note-number) { margin-top: 10px; }
+.notebook-scan { margin: 20px 0 0; max-width: 30rem; }
+.notebook-scan img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.notebook-scan figcaption { margin-top: 12px; color: var(--muted); font-size: .86rem; }
 @media (max-width: 900px) {
   .page { width: calc(100% - 48px); }
   .intro-layout { grid-template-columns: minmax(0, 1fr) 195px; gap: 32px; }
@@ -188,7 +204,6 @@ var { font-family: var(--serif); }
   .site-header { min-height: 75px; gap: 4px 18px; font-size: .86rem; }
   .header-tools { width: 100%; justify-content: space-between; gap: 12px; }
   nav { width: 100%; gap: 4px 18px; }
-  nav a { min-width: calc((100% - 36px) / 3); }
   .header-cv { font-size: .82rem; }
   .introduction { padding-top: 34px; }
   .page-intro { padding-top: 30px; }

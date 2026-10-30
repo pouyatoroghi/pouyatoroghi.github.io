@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Mathematical notes | Mohammad Pouya Toroghi</title>
+  <meta name="description" content="Complete mathematical derivations in generalization, sequential inference, and Bayesian denoising, alongside an original handwritten calculation.">
+  <link rel="canonical" href="https://pouyatoroghi.github.io/notes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mathematical notes | Mohammad Pouya Toroghi">
+  <meta property="og:description" content="Complete mathematical derivations in generalization, sequential inference, and Bayesian denoising, alongside an original handwritten calculation.">
+  <meta property="og:url" content="https://pouyatoroghi.github.io/notes.html">
+  <meta property="og:image" content="https://pouyatoroghi.github.io/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mohammad Pouya Toroghi, M.Sc. student, Sharif University of Technology.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="background.html">Background</a>
+        <a href="notes.html" aria-current="page">Math notes</a>
+        <a href="puzzles.html">Puzzles</a>
+        <a href="question.html">Questions</a>
+      </nav>
+      <div class="header-tools">
+        <a class="header-cv" href="assets/CV_Toroghi_Oct2026.pdf">Curriculum vitae <span class="file-type">PDF</span></a>
+        <div class="theme-switch" role="group" aria-label="Color theme" hidden>
+          <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" class="notes-index">
+<section class="page-intro" aria-labelledby="page-title">
+        <p class="page-owner"><a href="index.html">Mohammad Pouya Toroghi</a></p>
+        <h1 id="page-title">Mathematical notes</h1>
+        <div class="page-lead"><p>Worked derivations in probability, inference, learning, and analysis, with explicit assumptions and concrete examples. The probability notes connect the proofs to practical questions in model evaluation, generalization, and signal recovery.</p><p>The probability notes are expositions of established results, with references to their sources. A separate entry presents a calculation from my handwritten notes.</p></div>
+      </section>
+<section class="section" aria-labelledby="probability-title"><div class="section-heading"><h2 id="probability-title">Probability in learning and inference</h2><span>Complete derivations</span></div>
+<article class="note-entry"><p class="note-number">01</p><div><h3><a href="note-pac-bayes.html">Generalization through a change of measure</a></h3><p>Derive a finite-sample guarantee that holds for data-dependent distributions over predictors. Follow the argument from concentration to a Gibbs learning objective and an explicit risk certificate.</p><p class="tools">Exponential moments · KL divergence · Gibbs distributions</p></div></article>
+<article class="note-entry"><p class="note-number">02</p><div><h3><a href="note-sequential.html">Confidence intervals that survive repeated inspection</a></h3><p>Construct a confidence sequence from a Gaussian mixture of exponential supermartingales. Derive the boundary and apply it to deciding when a model evaluation is precise enough to stop.</p><p class="tools">Conditional concentration · Gaussian integration · Optional stopping</p></div></article>
+<article class="note-entry"><p class="note-number">03</p><div><h3><a href="note-denoising.html">Denoising, scores, and posterior uncertainty</a></h3><p>Recover posterior means and covariances from density derivatives. Connect denoising loss to score estimation, then test the identities on Gaussian and two-point signals.</p><p class="tools">Conditional expectation · Differentiation under the integral · MMSE estimation</p></div></article>
+</section>
+<section class="section" aria-labelledby="notebook-title"><div class="section-heading"><h2 id="notebook-title">From my notebook</h2></div><article class="note-entry"><p class="note-number">04</p><div><h3><a href="note-floor-series.html">A floor-series integral by self-similarity</a></h3><p>Evaluate an integral of an infinite floor-function series using scaling and interval translations. The complete typeset argument accompanies the original handwritten page.</p><p class="tools">Uniform convergence · Self-similarity · Exact integration</p></div></article></section>
+<div class="page-links"><a href="puzzles.html">Mathematical puzzles and solutions</a><a href="background.html">Mathematical preparation</a></div>
+    </main>
+    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated October 2026</p><a href="notes.html">Mathematical notes <span aria-hidden="true">↑</span></a></footer>
+  </div>
+</body>
+</html>

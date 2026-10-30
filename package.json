@@ -1,0 +1,10 @@
+{
+  "name": "pouyatoroghi.github.io",
+  "private": true,
+  "scripts": {
+    "render:math": "node scripts/render-math.cjs"
+  },
+  "devDependencies": {
+    "katex": "0.19.1"
+  }
+}

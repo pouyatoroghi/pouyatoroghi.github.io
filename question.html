@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <title>Research Questions | Mohammad Pouya Toroghi</title>
-  <meta name="description" content="Questions I want to study during a PhD: reasoning as search, calibrated intermediate evaluation, and how systems decide where to spend computation.">
+  <title>Long-term Research Questions | Mohammad Pouya Toroghi</title>
+  <meta name="description" content="Long-term ambitions in general intelligence, mathematical and scientific discovery, reliable adaptation, and principled learning and forgetting.">
   <link rel="canonical" href="https://pouyatoroghi.github.io/question.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Research Questions | Mohammad Pouya Toroghi">
-  <meta property="og:description" content="Questions I want to study during a PhD: reasoning as search, calibrated intermediate evaluation, and how systems decide where to spend computation.">
+  <meta property="og:title" content="Long-term Research Questions | Mohammad Pouya Toroghi">
+  <meta property="og:description" content="Long-term ambitions in general intelligence, mathematical and scientific discovery, reliable adaptation, and principled learning and forgetting.">
   <meta property="og:url" content="https://pouyatoroghi.github.io/question.html">
   <meta property="og:image" content="https://pouyatoroghi.github.io/assets/social-preview.png">
   <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
         <a href="projects.html">Projects</a>
         <a href="background.html">Background</a>
         <a href="puzzles.html">Puzzles</a>
-        <a href="question.html" aria-current="page">Question</a>
+        <a href="question.html" aria-current="page">Questions</a>
       </nav>
       <div class="header-tools">
         <a class="header-cv" href="assets/CV_Toroghi_Oct2026.pdf">Curriculum vitae <span class="file-type">PDF</span></a>
@@ -43,37 +43,46 @@
     <main id="main" tabindex="-1">
       <section class="page-intro" aria-labelledby="page-title">
         <p class="page-owner"><a href="index.html">Mohammad Pouya Toroghi</a></p>
-        <h1 id="page-title" class="question-title">Questions I want to work on</h1>
-        <p class="entry-context">Research interests for doctoral study</p>
-        <div class="page-lead"><p>Contributing to artificial general intelligence is my long-term ambition. The question that most draws me is how a system can assess its reasoning while it is still searching for a solution. I view reasoning as a search process, and want to study when calibrated judgments of intermediate states improve the search itself.</p></div>
-        <blockquote class="central-question">When does calibrated assessment of intermediate reasoning make search more reliable?</blockquote>
+        <h1 id="page-title" class="question-title">Long-term research questions</h1>
+        <p class="entry-context">Ambitions I want to pursue through doctoral research and beyond</p>
+        <div class="page-lead"><p>My long-term ambition is to contribute to artificial general intelligence through a deeper mathematical understanding of learning and reasoning. I am especially drawn to the possibility that ideas from inference, optimization, and structured search can explain how systems acquire knowledge, use it in unfamiliar settings, and revise it when necessary.</p><p>The questions below describe what I want to work toward. Each connects a broad ambition to problems I can begin studying through my existing research and mathematical preparation.</p></div>
+        <blockquote class="central-question">What mathematical principles would enable systems to reason, generalize, and revise their knowledge reliably?</blockquote>
       </section>
-      <section class="reading-section" aria-labelledby="step-title">
-        <h2 id="step-title">The perspective I want to explore</h2>
-        <p>I am interested in the distinction between judging a step's local validity and estimating the chance of reaching a solution from it. That chance depends on the continuation policy, available computation, and the criterion for success. For such estimates, calibration would mean agreement between predicted probabilities and observed success frequencies under specified conditions.</p>
-        <p>I want to understand how this agreement changes as search selects new states or the task distribution shifts. Whether improved calibration leads to better search decisions is an open question I want to study alongside candidate generation and reliable verification. Passing program tests, for instance, need not establish full correctness.</p>
+      <section class="reading-section" aria-labelledby="reasoning-title">
+        <h2 id="reasoning-title">Reasoning as search under limited computation</h2>
+        <p>Can general-purpose reasoning become a principled allocation of limited computation? I view reasoning as search over partial solutions. I want to understand how calibrated assessments of intermediate states can guide that search, distinguishing local validity, the probability of eventual success, and the expected benefit of further computation.</p>
+        <p>My calibration research, reinforcement learning background, and program-synthesis projects give me concrete ways into this question. I want to work toward systems that can evaluate and redirect their reasoning on unfamiliar problems, while understanding when their evaluations fail and which assumptions their decisions require.</p>
       </section>
-      <section class="reading-section" aria-labelledby="compute-title">
-        <h2 id="compute-title">An open question about computation</h2>
-        <p>I am also interested in how a system decides whether further reasoning is worth its cost. A branch's chance of success and the expected benefit of spending more computation on it are different quantities. I would like to understand when intermediate assessments help allocate effort, and when their errors instead misdirect it.</p>
+      <section class="reading-section" aria-labelledby="abstraction-title">
+        <h2 id="abstraction-title">Abstractions that support new discoveries</h2>
+        <p>Can a system learn abstractions that remain useful when the problem changes? A mathematical abstraction can expose common structure across problems that initially look unrelated. I want to understand how learning systems might discover similarly reusable representations and compose them in settings beyond their training experience.</p>
+        <p>Symbolic regression, program synthesis, and generative modeling motivate this interest. My longer-term aim is to help develop systems that contribute to mathematical and scientific discovery. I want to begin by studying which representations and assumptions make transfer possible, and how to distinguish reusable structure from success on familiar patterns.</p>
       </section>
-      <section class="reading-section" aria-labelledby="connection-title">
-        <h2 id="connection-title">Why this connects to my work</h2>
-        <p>My <a href="research.html#calibration">semantic-calibration research</a> examines confidence in long-form generation with limited fine-tuning data and distribution shift. It motivates my interest in extending response-level evaluation to intermediate reasoning.</p>
-        <p>My <a href="research.html#backdoors">white-box backdoor-detection research</a> brings a related interest in understanding hidden failure modes. Through reinforcement learning implementations and <a href="projects.html">program synthesis and neuro-symbolic projects</a>, I have worked with value estimation, search, and execution-based evaluation. My undergraduate unlearning research also gave me experience assessing methods across utility, privacy, and security.</p>
+      <section class="reading-section" aria-labelledby="reliability-title">
+        <h2 id="reliability-title">Reliable learning in a changing world</h2>
+        <p>Can a learning system remain statistically trustworthy as its data, decisions, and behavior change? I want to study uncertainty estimates that remain useful through distribution shifts, adaptation, and self-directed data collection. My semantic-calibration research provides a starting point; my security work makes hidden failures a particular concern.</p>
+        <p>The ambition is a system that improves through experience while retaining a meaningful account of the evidence behind its predictions. I want to understand which forms of reliability are attainable for particular decisions, what feedback they require, and where information or computational limits make the desired guarantees impossible.</p>
       </section>
-      <section class="reading-section" aria-labelledby="investigation-title">
-        <h2 id="investigation-title">What I hope to develop during a PhD</h2>
-        <p>During a PhD, I want to connect these questions through theoretical and empirical work on reasoning, learning, and uncertainty. My immediate aim is to understand the conditions under which intermediate evaluation helps a system reason, including where it fails. That is the part of the broader problem of general intelligence I want to begin with.</p>
+      <section class="reading-section" aria-labelledby="revision-title">
+        <h2 id="revision-title">Learning that can revise and forget</h2>
+        <p>Can a system learn continuously while preserving control over what it retains, revises, and forgets? My unlearning research motivates a broader goal: systems that incorporate new evidence, correct harmful behavior, and remove specified data influence while preserving useful knowledge.</p>
+        <p>I want to study the mathematical conditions under which these objectives are compatible and the information and computation they require. This connects learning dynamics, privacy, security, and continual adaptation. My aim is to make correction and forgetting principled parts of learning, with effects and costs that can be stated precisely and assessed.</p>
+      </section>
+      <section class="reading-section" aria-labelledby="commitment-title">
+        <h2 id="commitment-title">How I want to pursue these questions</h2>
+        <p>I want to build toward these ambitions through sustained theoretical and empirical work. During a PhD, I aim to develop precise formulations, proofs or counterexamples where appropriate, and experiments that distinguish competing explanations. My immediate <a href="research.html#phd-directions">research directions</a> offer several ways to begin; the common purpose is to understand the mathematical structure that makes intelligent behavior possible and reliable.</p>
       </section>
       <section class="reading-section related-reading" aria-labelledby="reading-title">
         <h2 id="reading-title">Related reading</h2>
-        <p>Some relevant work I hope to build on:</p>
+        <p>Mathematical and methodological starting points for these interests:</p>
         <ul>
-          <li>Yao et al. (2023). <a href="https://arxiv.org/abs/2305.10601">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</a>. Search over intermediate reasoning states.</li>
-          <li>Lightman et al. (2023). <a href="https://arxiv.org/abs/2305.20050">Let's Verify Step by Step</a>. Supervision of intermediate reasoning steps.</li>
-          <li>Guo et al. (2017). <a href="https://proceedings.mlr.press/v70/guo17a.html">On Calibration of Modern Neural Networks</a>. Probability calibration and empirical evaluation.</li>
-          <li>Hay et al. (2012). <a href="https://arxiv.org/abs/1207.5879">Selecting Computations: Theory and Applications</a>. Selecting computations by their expected value.</li>
+          <li>Bousquet and Elisseeff (2002). <a href="https://www.jmlr.org/papers/v2/bousquet02a.html">Stability and Generalization</a>. Connections between algorithmic stability and generalization.</li>
+          <li>Hay et al. (2012). <a href="https://arxiv.org/abs/1207.5879">Selecting Computations: Theory and Applications</a>. Metareasoning and the value of computation.</li>
+          <li>Guo et al. (2017). <a href="https://proceedings.mlr.press/v70/guo17a.html">On Calibration of Modern Neural Networks</a>. Probability calibration and its evaluation.</li>
+          <li>Gibbs and Candès (2021). <a href="https://arxiv.org/abs/2106.00170">Adaptive Conformal Inference Under Distribution Shift</a>. Adaptive prediction-set coverage, distinct from conditional calibration.</li>
+          <li>Ellis et al. (2021). <a href="https://people.csail.mit.edu/asolar/papers/EllisWNSMHCST21.pdf">DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning</a>. Learning reusable program abstractions and search policies.</li>
+          <li>Ginart et al. (2019). <a href="https://arxiv.org/abs/1907.05012">Making AI Forget You: Data Deletion in Machine Learning</a>. Formal data deletion and algorithms for specific learning settings.</li>
+          <li>Kingma and Welling (2013). <a href="https://arxiv.org/abs/1312.6114">Auto-Encoding Variational Bayes</a>. Variational inference and learning in latent-variable models.</li>
         </ul>
       </section>
     </main>

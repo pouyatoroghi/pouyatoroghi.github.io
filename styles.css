@@ -160,6 +160,9 @@ main { flex: 1; }
 .question-title { text-wrap: balance; }
 .central-question { max-width: 60ch; margin: 30px 0 0; padding-left: 22px; border-left: 2px solid var(--note-line); color: var(--heading); font: 400 clamp(1.2rem, 2vw, 1.45rem)/1.5 var(--serif); text-wrap: balance; }
 .equation { margin-block: 16px; font-family: var(--serif); line-height: 1.9; }
+.math-display .katex-display { margin: 0; text-align: left; }
+.math-display .katex-display > .katex { white-space: normal; text-align: left; }
+.math-display .katex-display > .katex > .katex-html > .katex-base { margin: .2em 0; }
 var { font-family: var(--serif); }
 .related-reading { padding-top: 26px; border-top: 1px solid var(--line); font-size: .92rem; }
 .related-reading ul { padding-left: 20px; margin: 16px 0 0; }

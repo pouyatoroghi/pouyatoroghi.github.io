@@ -1,6 +1,6 @@
 # Mohammad Pouya Toroghi — academic website
 
-A static, responsive academic website prepared for **https://pouyatoroghi.github.io/**. Six separate HTML pages share `styles.css` and a small `theme.js` script. There is no framework, build step, package installation, remotely loaded font, analytics, or paid hosting dependency.
+A static, responsive academic website at **https://pouyatoroghi.github.io/**. Six separate HTML pages share `styles.css` and a small `theme.js` script. Publishing and browsing require no build step or package installation. Fonts and mathematical typesetting assets are hosted locally, with no framework, CDN, analytics, or paid hosting dependency.
 
 The theme follows the system preference until a visitor chooses **Light** or **Dark**; that choice persists across pages and visits when browser storage is available. Puzzle hints and solutions use native HTML disclosures and work without JavaScript. With JavaScript disabled, all pages remain readable and the theme follows the system preference.
 
@@ -12,7 +12,7 @@ Double-click `index.html` to open the website locally. Content, styling, navigat
 
 This folder is connected to the existing [pouyatoroghi/pouyatoroghi.github.io](https://github.com/pouyatoroghi/pouyatoroghi.github.io) repository. Its existing commit history is preserved. Website updates belong only in this repository.
 
-The intended public address is **https://pouyatoroghi.github.io/**. GitHub Pages should publish the **main** branch from **/(root)**. Deployment availability depends on the repository's visibility and GitHub plan; the repository's Pages settings and Actions tab show its current deployment status.
+The repository is public and GitHub Pages publishes the **main** branch from **/(root)** at **https://pouyatoroghi.github.io/**. The Actions tab shows deployment progress after each push.
 
 To push a later update, use the commands below from this website folder. No framework, package installation, build command, custom domain, or CNAME file is required. The `.nojekyll` file makes GitHub Pages serve the static files directly.
 
@@ -21,11 +21,11 @@ GitHub documentation: [publishing from a branch](https://docs.github.com/en/page
 ## Update the site
 
 - **About, research interests, contact:** edit `index.html`.
-- **Research problems, contributions, evaluation, status:** edit `research.html`.
-- **Selected technical projects:** edit `projects.html`.
-- **Education, teaching, honors:** edit `background.html`.
-- **Puzzles, hints, solutions:** edit `puzzles.html`; preserve the `<details>` and `<summary>` structure.
-- **Long-term research direction and related reading:** edit `question.html`.
+- **Research contributions and six PhD directions:** edit `research.html`.
+- **Studies and projects in inference, search, decisions, and representation:** edit `projects.html`.
+- **Mathematical preparation, education, teaching, honors:** edit `background.html`.
+- **Puzzles, hints, solutions:** edit `puzzles.html`; preserve the `<details>` and `<summary>` structure. See the mathematical typesetting instructions below when changing an expression.
+- **Four long-term research questions and related reading:** edit `question.html`.
 - **Colors, typography, spacing, responsive layouts:** edit `styles.css`.
 - **Theme selection and persistence:** edit `theme.js`.
 - **Fonts:** Source Sans 3 and Source Serif 4 are bundled in `assets/fonts/` with their SIL Open Font License notices. Keep those notices when redistributing the font files.
@@ -38,18 +38,31 @@ Navigation, footer, and page metadata are written directly in each HTML file; up
 Push later changes from this folder:
 
 ```powershell
-git add index.html research.html projects.html background.html puzzles.html question.html styles.css theme.js assets .nojekyll .gitignore README.md
+git add index.html research.html projects.html background.html puzzles.html question.html styles.css theme.js assets scripts package.json package-lock.json .nojekyll .gitignore README.md
 git commit -m "Update academic website"
 git push origin main
 ```
 
+## Mathematical typesetting
+
+Puzzles contain LaTeX source in `data-tex` attributes and pre-rendered KaTeX HTML with accessible MathML. They display immediately, work without JavaScript, and use bundled fonts in `assets/katex/`. Keep the accompanying license notices.
+
+To change a formula, edit its `data-tex` value and preserve the `<!--/math-->` closing marker. Escape attribute-sensitive characters as HTML entities, such as `&lt;` for a less-than sign. With Node.js 22.12 or later, regenerate the typeset output from this folder:
+
+```powershell
+npm ci --ignore-scripts
+npm run render:math
+```
+
+The pinned KaTeX development dependency is needed only for regenerating mathematics. Commit the changed HTML and any changed vendored assets afterward; GitHub Pages serves the generated files directly.
+
 ## Content notes
 
-The October 2026 CV supplies the factual record of education, research, projects, teaching, and honors. The prose explains connections and research interests rather than reproducing its bullet points. Ongoing work remains distinct from completed undergraduate research.
+The October 2026 CV supplies the factual record of education, research, projects, teaching, and honors. Mathematical preparation is supported by teaching responsibilities and studies in inference, search, constraint solving, and learning. The prose explains connections and interests rather than reproducing CV bullet points. Ongoing work remains distinct from completed undergraduate research.
 
-The Question page develops the owner's stated interest in AGI, reasoning as search, and calibrated assessment of intermediate steps. The page presents questions for future doctoral work, not a solved approach to AGI or an instructional roadmap. Papers under **Related reading** are references by other researchers, not the owner's publications. No publications, accepted papers, research metrics, or project repositories have been invented. The GitHub profile link uses the username confirmed by the owner.
+The Questions page develops the owner's stated ambitions through calibrated search, reusable abstractions and discovery, reliable adaptation, and controlled model revision. These and the six PhD directions are prospective interests, not completed results or claims of original theoretical discoveries. Papers under **Related reading** are references by other researchers, not the owner's publications. No publications, accepted papers, research metrics, or project repositories have been invented.
 
-The downloadable PDF is an unchanged copy of the supplied CV and includes the owner's phone number. Publishing this folder makes that PDF publicly accessible. To omit the number, replace the PDF with a public version before the first push.
+The downloadable PDF is an unchanged copy of the supplied CV and includes the owner's phone number. It is publicly accessible; replace it with a revised public version if the contact details should change.
 
 A Git push updates the repository. The public site updates only after a successful GitHub Pages deployment.
 

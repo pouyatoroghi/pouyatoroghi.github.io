@@ -14,11 +14,11 @@ Double-click `index.html` to open the website locally. Content, styling, navigat
 
 This folder is connected to the existing [pouyatoroghi/pouyatoroghi.github.io](https://github.com/pouyatoroghi/pouyatoroghi.github.io) repository. Its existing commit history is preserved. Website updates belong only in this repository.
 
-The repository is public and GitHub Pages publishes the **main** branch from **/(root)** at **https://pouyatoroghi.github.io/**. The Actions tab shows deployment progress after each push.
+The repository is public. GitHub Pages uses the custom `.github/workflows/pages.yml` workflow to publish the static website from the root of **main** at **https://pouyatoroghi.github.io/**. Each push to main triggers publication; the workflow can also be run manually. It packages the HTML pages, stylesheet, theme script, and assets without rebuilding mathematics or installing packages. Concurrent deployments are serialized. The Actions tab shows deployment progress.
 
 To push a later update, use the commands below from this website folder. No framework, package installation, build command, custom domain, or CNAME file is required. The `.nojekyll` file makes GitHub Pages serve the static files directly.
 
-GitHub documentation: [publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+GitHub documentation: [custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Update the site
 

@@ -1,0 +1,38 @@
+name: Publish academic website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: academic-website-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - name: Package static website
+        run: |
+          mkdir _site
+          cp -- *.html styles.css theme.js .nojekyll _site/
+          cp -R assets _site/assets
+          for file in robots.txt sitemap.xml; do
+            if [ -f "$file" ]; then cp "$file" _site/; fi
+          done
+          test -s _site/index.html
+          test -s _site/styles.css
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4

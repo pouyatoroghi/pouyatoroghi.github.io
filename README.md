@@ -4,7 +4,7 @@ A static, responsive academic website at **https://pouyatoroghi.github.io/**. Fo
 
 The theme follows the system preference until a visitor chooses **Light** or **Dark**; that choice persists across pages and visits when browser storage is available. Puzzle hints and solutions use native HTML disclosures and work without JavaScript. With JavaScript disabled, all pages remain readable and the theme follows the system preference.
 
-At desktop widths of 1200px and above, a persistent left rail holds site navigation and a right rail links to the current page’s sections. The grid caps its central column at the prose width, with fluid outer margins, sidebar widths, and gutters; smaller screens retain the compact header. Section links are static HTML and work without JavaScript; update the corresponding `.page-outline` links when changing headings.
+At desktop widths of 1200px and above, a persistent left rail holds site navigation and a right rail links to the current page’s sections. The layout fills the browser width and at least its height: full-height sidebars sit at both edges, and the central text expands with the available space. Smaller screens retain the compact header and modest content padding. Section links are static HTML and work without JavaScript; update the corresponding `.page-outline` links when changing headings.
 
 ## Preview
 
@@ -30,7 +30,7 @@ GitHub documentation: [custom Pages workflows](https://docs.github.com/en/pages/
 - **Applied probability problems:** `note-off-policy.html` derives policy-evaluation bias, variance, and a coverage lower bound; `note-rare-events.html` derives a rare-event estimator and its asymptotic efficiency; `note-adaptive-calibration.html` develops a matrix confidence bound and its implications for sensor experiments. Run `python scripts/check-probability.py` to reproduce their deterministic numerical checks using only the Python standard library.
 - **Puzzles, hints, solutions:** edit `puzzles.html`; preserve the `<details>` and `<summary>` structure. See the mathematical typesetting instructions below when changing an expression.
 - **Four long-term research questions and related reading:** edit `question.html`.
-- **Colors, typography, spacing, responsive layouts:** edit `styles.css`.
+- **Colors, typography, spacing, responsive layouts:** edit `styles.css`. After changing it, update the `styles.css?v=...` revision in every HTML page so returning browsers request the new stylesheet.
 - **Theme selection and persistence:** edit `theme.js`.
 - **Fonts:** Source Sans 3 and Source Serif 4 are bundled in `assets/fonts/` with their SIL Open Font License notices. Keep those notices when redistributing the font files.
 - **CV:** replace `assets/CV_Toroghi_Oct2026.pdf`. If you rename it, update CV links across all HTML pages.

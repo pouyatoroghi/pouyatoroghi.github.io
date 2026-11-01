@@ -74,7 +74,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .page { width: 100%; padding-inline: var(--page-margin); }
 .skip-link { position: absolute; top: 12px; left: 12px; padding: 8px 16px; background: var(--heading); color: var(--paper); transform: translateY(-170%); z-index: 10; }
 .skip-link:focus { transform: translateY(0); }
-.site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; min-height: 91px; padding-block: 16px; border: 0; font-size: .9rem; position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 3px double var(--rule); }
+.site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; min-height: 91px; padding-block: 16px; border: 0; font-size: .9rem; position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 3px solid transparent; }
+.site-header::after { content: ""; position: absolute; bottom: -3px; left: 15%; width: 70%; border-bottom: 3px double var(--rule); pointer-events: none; }
 nav { display: flex; flex-wrap: wrap; gap: 8px 30px; }
 nav a, .header-cv { display: inline-flex; align-items: center; min-height: 40px; text-decoration: none; }
 nav a { color: var(--muted); border-bottom: 2px solid transparent; }
@@ -273,12 +274,15 @@ var { font-family: var(--serif); }
   }
   .site-header { grid-column: 1 / -1; padding-block: 16px; min-height: 0; }
   .rail-identity { font-size: 1.3rem; }
-  .site-nav { grid-column: 1; grid-row: 2 / 4; position: sticky; top: var(--header-height); margin-top: 0; padding: 24px 16px 24px 0; border-right: 1px solid var(--rule); height: calc(100dvh - var(--header-height)); flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 4px; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; }
+  .site-nav { grid-column: 1; grid-row: 2 / 4; position: sticky; top: var(--header-height); margin-top: 0; padding: 24px 16px 24px 0; border-right: 1px solid transparent; height: calc(100dvh - var(--header-height)); flex-direction: column; flex-wrap: nowrap; align-items: flex-start; gap: 4px; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; }
   .site-nav a { min-height: 40px; padding: 0; border: 0; }
   .site-nav a[aria-current] { color: var(--blue); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .35em; }
   .site-nav a:hover { text-decoration: underline; text-underline-offset: .35em; }
   main { grid-column: 2; min-width: 0; font-size: clamp(1.0625rem, .85rem + .25vw, 1.25rem); }
-  .page-outline { display: block; grid-column: 3; grid-row: 2 / 4; position: sticky; top: var(--header-height); min-width: 0; margin-top: 0; padding: 24px 0 24px 16px; border-left: 1px solid var(--rule); height: calc(100dvh - var(--header-height)); max-height: calc(100dvh - var(--header-height) - 48px); overflow-y: auto; }
+  .page-outline { display: block; grid-column: 3; grid-row: 2 / 4; position: sticky; top: var(--header-height); min-width: 0; margin-top: 0; padding: 24px 0 24px 16px; border-left: 1px solid transparent; height: calc(100dvh - var(--header-height)); max-height: calc(100dvh - var(--header-height)); overflow-y: auto; }
+  .site-nav::after, .page-outline::after { content: ""; position: absolute; top: 15%; height: 70%; width: 1px; background: var(--rule); pointer-events: none; }
+  .site-nav::after { right: 0; }
+  .page-outline::after { left: 0; }
   .outline-inner { min-width: 0; }
   .outline-label { color: var(--muted); font-size: .8rem; margin-bottom: 14px; }
   .outline-links, .outline-more { display: flex; flex-direction: column; gap: 12px; }

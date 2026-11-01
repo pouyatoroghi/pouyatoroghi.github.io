@@ -4,7 +4,7 @@ A static, responsive academic website at **https://pouyatoroghi.github.io/**. Fo
 
 The theme follows the system preference until a visitor chooses **Light** or **Dark**; that choice persists across pages and visits when browser storage is available. Puzzle hints and solutions use native HTML disclosures and work without JavaScript. With JavaScript disabled, all pages remain readable and the theme follows the system preference.
 
-At desktop widths of 1200px and above, a persistent left rail holds site navigation and a right rail links to the current page’s sections. Smaller screens retain the compact header. Section links are static HTML and work without JavaScript; update the corresponding `.page-outline` links when changing headings.
+At desktop widths of 1200px and above, a persistent left rail holds site navigation and a right rail links to the current page’s sections. The grid caps its central column at the prose width, with fluid outer margins, sidebar widths, and gutters; smaller screens retain the compact header. Section links are static HTML and work without JavaScript; update the corresponding `.page-outline` links when changing headings.
 
 ## Preview
 

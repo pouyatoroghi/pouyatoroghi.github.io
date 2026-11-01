@@ -1,6 +1,6 @@
 # Mohammad Pouya Toroghi — academic website
 
-A static, responsive academic website at **https://pouyatoroghi.github.io/**. Eleven separate HTML pages share `styles.css` and a small `theme.js` script. Publishing and browsing require no build step or package installation. Fonts and mathematical typesetting assets are hosted locally, with no framework, CDN, analytics, or paid hosting dependency.
+A static, responsive academic website at **https://pouyatoroghi.github.io/**. Fourteen separate HTML pages share `styles.css` and a small `theme.js` script. Publishing and browsing require no build step or package installation. Fonts and mathematical typesetting assets are hosted locally, with no framework, CDN, analytics, or paid hosting dependency.
 
 The theme follows the system preference until a visitor chooses **Light** or **Dark**; that choice persists across pages and visits when browser storage is available. Puzzle hints and solutions use native HTML disclosures and work without JavaScript. With JavaScript disabled, all pages remain readable and the theme follows the system preference.
 
@@ -25,6 +25,7 @@ GitHub documentation: [publishing from a branch](https://docs.github.com/en/page
 - **Studies and projects in inference, search, decisions, and representation:** edit `projects.html`.
 - **Mathematical preparation, education, teaching, honors:** edit `background.html`.
 - **Mathematical notebook:** edit `notes.html` for the index; `note-pac-bayes.html`, `note-sequential.html`, `note-denoising.html`, and `note-floor-series.html` contain the full derivations. The original handwritten page is `assets/handwritten-floor-series.jpg`.
+- **Applied probability problems:** `note-off-policy.html` derives policy-evaluation bias, variance, and a coverage lower bound; `note-rare-events.html` derives a rare-event estimator and its asymptotic efficiency; `note-adaptive-calibration.html` develops a matrix confidence bound and its implications for sensor experiments. Run `python scripts/check-probability.py` to reproduce their deterministic numerical checks using only the Python standard library.
 - **Puzzles, hints, solutions:** edit `puzzles.html`; preserve the `<details>` and `<summary>` structure. See the mathematical typesetting instructions below when changing an expression.
 - **Four long-term research questions and related reading:** edit `question.html`.
 - **Colors, typography, spacing, responsive layouts:** edit `styles.css`.
@@ -46,7 +47,7 @@ git push origin main
 
 ## Mathematical typesetting
 
-Puzzles and mathematical notes contain LaTeX source in `data-tex` attributes and pre-rendered KaTeX HTML with accessible MathML. They display immediately, work without JavaScript, and use bundled fonts in `assets/katex/`. Keep the accompanying license notices. The default rendering command processes all five pages containing mathematics; a filename argument renders only that page.
+Puzzles and mathematical notes contain LaTeX source in `data-tex` attributes and pre-rendered KaTeX HTML with accessible MathML. They display immediately, work without JavaScript, and use bundled fonts in `assets/katex/`. Keep the accompanying license notices. The default rendering command processes all eight pages containing mathematics; a filename argument renders only that page.
 
 To change a formula, edit its `data-tex` value and preserve the `<!--/math-->` closing marker. Escape attribute-sensitive characters as HTML entities, such as `&lt;` for a less-than sign. With Node.js 22.12 or later, regenerate the typeset output from this folder:
 
@@ -64,6 +65,8 @@ The October 2026 CV supplies the factual record of education, research, projects
 The Questions page develops the owner's stated ambitions through calibrated search, reusable abstractions and discovery, reliable adaptation, and controlled model revision. These and the six PhD directions are prospective interests, not completed results or claims of original theoretical discoveries. Papers under **Related reading** are references by other researchers, not the owner's publications. No publications, accepted papers, research metrics, or project repositories have been invented.
 
 The mathematical notebook distinguishes the owner's supplied handwritten floor-series calculation from newly prepared expositions of established probability results. The three probability notes derive a PAC-Bayes generalization bound, a Gaussian-mixture confidence sequence, and Gaussian denoising identities. Their worked numerical examples illustrate the mathematics; they are not research experiments or claims of novel results. The photograph is an unchanged copy of the supplied image, accompanied by a complete typeset derivation. No probabilistic reinterpretation of that integral is included.
+
+The three applied analyses now lead the notebook. They use explicit recommendation-session, detector-noise, and sensor-calibration models. Their numbers are analytical or finite-model checks, not results from the owner's research projects or real deployments. The rare-event draw-count comparison concerns relative RMSE under the stated model, not a measured runtime or a confidence-interval guarantee. The older introductory derivations remain available under Supporting derivations.
 
 The downloadable PDF is an unchanged copy of the supplied CV and includes the owner's phone number. It is publicly accessible; replace it with a revised public version if the contact details should change.
 

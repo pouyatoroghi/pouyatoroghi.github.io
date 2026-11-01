@@ -14,7 +14,7 @@ const decodeAttribute = value => value.replace(/&(amp|lt|gt|quot|apos|#\d+|#x[\d
   return String.fromCodePoint(entity[1].toLowerCase() === 'x' ? parseInt(entity.slice(2), 16) : Number(entity.slice(1)));
 });
 
-for (const file of process.argv.slice(2).length ? process.argv.slice(2) : ['puzzles.html', 'note-pac-bayes.html', 'note-sequential.html', 'note-denoising.html', 'note-floor-series.html']) {
+for (const file of process.argv.slice(2).length ? process.argv.slice(2) : ['puzzles.html', 'note-pac-bayes.html', 'note-sequential.html', 'note-denoising.html', 'note-floor-series.html', 'note-off-policy.html', 'note-rare-events.html', 'note-adaptive-calibration.html']) {
   const target = path.resolve(root, file);
   if (!target.startsWith(root + path.sep) || !target.endsWith('.html')) throw new Error('Use an HTML file inside the site.');
   const source = fs.readFileSync(target, 'utf8');

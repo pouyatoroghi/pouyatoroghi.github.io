@@ -31,6 +31,11 @@
     if (!choice) applyTheme();
   });
   document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.site-header');
+    // Keep sticky navigation and anchor targets below the header after font or viewport changes.
+    new ResizeObserver(() => {
+      root.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+    }).observe(header);
     const controls = document.querySelector('.theme-switch');
     controls.hidden = false;
     controls.addEventListener('click', event => {

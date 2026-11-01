@@ -4,7 +4,7 @@ A static, responsive academic website at **https://pouyatoroghi.github.io/**. Fo
 
 The theme follows the system preference until a visitor chooses **Light** or **Dark**; that choice persists across pages and visits when browser storage is available. Puzzle hints and solutions use native HTML disclosures and work without JavaScript. With JavaScript disabled, all pages remain readable and the theme follows the system preference.
 
-At desktop widths of 1200px and above, a full-width masthead and horizontal navigation sit above the content. A quiet right-hand contents column stays available while reading. The unframed layout fills the browser width and at least its height, with shared gutters for all text. Smaller screens use compact navigation above a single content column. Section links are static HTML and work without JavaScript; update the corresponding `.page-outline` links when changing headings.
+At desktop widths of 1200px and above, a sticky full-width masthead keeps the name and description visible, with compact unshaded navigation on the left and a quiet contents column on the right. Both navigation columns remain below the header while scrolling. The unframed layout fills the browser width and at least its height, with shared gutters for all text. Smaller screens use compact navigation below the sticky identity header and above a single content column. Header height is measured so anchors remain visible after resizing or font loading. Section links are static HTML and work without JavaScript; update the corresponding `.page-outline` links when changing headings.
 
 ## Preview
 
@@ -31,7 +31,7 @@ GitHub documentation: [custom Pages workflows](https://docs.github.com/en/pages/
 - **Puzzles, hints, solutions:** edit `puzzles.html`; preserve the `<details>` and `<summary>` structure. See the mathematical typesetting instructions below when changing an expression.
 - **Four long-term research questions and related reading:** edit `question.html`.
 - **Colors, typography, spacing, responsive layouts:** edit `styles.css`. After changing it, update the `styles.css?v=...` revision in every HTML page so returning browsers request the new stylesheet.
-- **Theme selection and persistence:** edit `theme.js`.
+- **Theme selection, persistence, and sticky-header offsets:** edit `theme.js`; update its revision in every HTML page after changes.
 - **Fonts:** Source Sans 3 and Source Serif 4 are bundled in `assets/fonts/` with their SIL Open Font License notices. Keep those notices when redistributing the font files.
 - **CV:** replace `assets/CV_Toroghi_Oct2026.pdf`. If you rename it, update CV links across all HTML pages.
 - **Social preview:** the editable design is `assets/social-preview.svg`; `assets/social-preview.png` is the exported image used by sharing services. Update both when changing the preview text.

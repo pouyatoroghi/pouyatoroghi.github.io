@@ -4,6 +4,8 @@ A static, responsive academic website at **https://pouyatoroghi.github.io/**. Fo
 
 The theme follows the system preference until a visitor chooses **Light** or **Dark**; that choice persists across pages and visits when browser storage is available. Puzzle hints and solutions use native HTML disclosures and work without JavaScript. With JavaScript disabled, all pages remain readable and the theme follows the system preference.
 
+At desktop widths of 1200px and above, a persistent left rail holds site navigation and a right rail links to the current page’s sections. Smaller screens retain the compact header. Section links are static HTML and work without JavaScript; update the corresponding `.page-outline` links when changing headings.
+
 ## Preview
 
 Double-click `index.html` to open the website locally. Content, styling, navigation, and the CV work without a server. For an HTTP preview, including consistent theme storage across pages, run `python -m http.server 4173 --bind 127.0.0.1` in this folder and open http://127.0.0.1:4173/.

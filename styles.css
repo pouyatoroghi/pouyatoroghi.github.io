@@ -309,8 +309,23 @@ var { font-family: var(--serif); }
 .note-page > .reading-section + .reading-section { padding-top: 14px; }
 @media (min-width: 1200px) {
   main:not(.note-page) .page-owner { display: none; }
-  .note-page .page-owner > a:first-child, .note-page .page-owner > span { display: none; }
+
   .page-intro, .introduction { padding-top: 40px; }
 }
 
 @media print { .site-header, .site-nav, .rail-identity, .page-outline { display: none; } .page { display: block; min-height: 0; padding: 0; } main { padding: 0; font-size: inherit; } footer { margin-inline: 0; } }
+
+.home-overview { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(24px, 3vw, 56px); margin-top: 28px; }
+.home-overview .biography > p:first-child { padding: 0; border: 0; background: none; }
+.preparation-summary h2 { font-size: 1.4rem; }
+.evidence-list { margin: 16px 0; padding-left: 1.1em; }
+.evidence-list li + li { margin-top: 12px; }
+.introduction > .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 0; border: 0; margin-top: 24px; }
+.introduction > .contact .profile-links, .introduction > .contact .cv-link { margin-top: 0; }
+.research-status { color: var(--blue); }
+.research-page .research-entry + .research-entry { margin-top: 36px; }
+.project-list .project h3 { line-height: 1.45; }
+@media (max-width: 900px) { .home-overview { grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 1600px) { main { font-size: 1.25rem; } }
+
+@media (max-width: 700px) { .introduction h1 { font-size: clamp(1.3rem, 5.8vw, 2rem); letter-spacing: -.02em; } }

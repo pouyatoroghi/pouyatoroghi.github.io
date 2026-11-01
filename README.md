@@ -62,15 +62,17 @@ The pinned KaTeX development dependency is needed only for regenerating mathemat
 
 ## Content notes
 
-The October 2026 CV supplies the factual record of education, research, projects, teaching, and honors. Mathematical preparation is supported by teaching responsibilities and studies in inference, search, constraint solving, and learning. The prose explains connections and interests rather than reproducing CV bullet points. Ongoing work remains distinct from completed undergraduate research.
+The October 2026 CV supplies the factual record of education, research, projects, teaching, and honors. Mathematical preparation is supported by teaching responsibilities and studies in inference, search, constraint solving, and learning. The prose explains connections and interests rather than reproducing CV bullet points. Ongoing work remains distinct from completed undergraduate research. Both current projects are manuscripts in preparation for planned ICML submission, as confirmed by the owner on November 1, 2026; neither is represented as submitted or accepted.
 
-The Questions page develops the owner's stated ambitions through calibrated search, reusable abstractions and discovery, reliable adaptation, and controlled model revision. These and the six PhD directions are prospective interests, not completed results or claims of original theoretical discoveries. Papers under **Related reading** are references by other researchers, not the owner's publications. No publications, accepted papers, research metrics, or project repositories have been invented.
+The homepage prioritizes verified mathematical teaching responsibilities and academic evidence, with direct links to two expository notes. The Questions page develops the owner's stated ambitions through calibrated search, reusable abstractions and discovery, reliable adaptation, and controlled model revision. These and the six PhD directions are prospective interests, not completed results or claims of original theoretical discoveries. Papers under **Related reading** are references by other researchers, not the owner's publications. No publications, accepted papers, research metrics, or project repositories have been invented.
 
 The mathematical notebook distinguishes the owner's supplied handwritten floor-series calculation from newly prepared expositions of established probability results. The three probability notes derive a PAC-Bayes generalization bound, a Gaussian-mixture confidence sequence, and Gaussian denoising identities. Their worked numerical examples illustrate the mathematics; they are not research experiments or claims of novel results. The photograph is an unchanged copy of the supplied image, accompanied by a complete typeset derivation. No probabilistic reinterpretation of that integral is included.
 
 The three applied analyses now lead the notebook. They use explicit recommendation-session, detector-noise, and sensor-calibration models. Their numbers are analytical or finite-model checks, not results from the owner's research projects or real deployments. The rare-event draw-count comparison concerns relative RMSE under the stated model, not a measured runtime or a confidence-interval guarantee. The older introductory derivations remain available under Supporting derivations.
 
 The downloadable PDF is an unchanged copy of the supplied CV and includes the owner's phone number. It is publicly accessible; replace it with a revised public version if the contact details should change.
+
+The Actions workflow publishes `scripts/check-probability.py` with the static pages and runs it before deployment so the public reproduction links stay usable.
 
 A Git push updates the repository. The public site updates only after a successful GitHub Pages deployment.
 

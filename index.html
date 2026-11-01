@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script src="theme.js?v=16e68cf4627a"></script>
-  <link rel="stylesheet" href="styles.css?v=89c145871a2b">
+  <link rel="stylesheet" href="styles.css?v=2ad703e3087f">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -45,31 +45,45 @@
     <main id="main" tabindex="-1">
       <section class="introduction" aria-labelledby="name">
         <h1 id="name">Mohammad Pouya Toroghi</h1>
-        <p class="affiliation">M.Sc. student in Computer Engineering <span aria-hidden="true">·</span> Sharif University of Technology</p>
-        <div class="intro-layout">
+        <p class="affiliation">M.Sc. student in Computer Engineering · Sharif University of Technology</p>
+        <p class="phd-note">Seeking <strong>PhD opportunities for Fall 2027</strong>.</p>
+        <aside class="contact" aria-label="Contact and profiles">
+          <a class="email" href="mailto:toroghipouya@gmail.com">toroghipouya@gmail.com</a>
+          <div class="profile-links"><a href="https://github.com/pouyatoroghi">GitHub</a><a href="https://linkedin.com/in/pouyatoroghi">LinkedIn</a></div>
+          <a class="cv-link" href="assets/CV_Toroghi_Oct2026.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+        </aside>
+        <div class="home-overview">
           <div class="biography">
-            <p>My interests lie in the <strong>mathematical foundations of machine learning</strong>: how learning systems represent uncertainty, make decisions, and reason through unfamiliar problems. I am a master's student at Sharif University of Technology, advised by Mohammad Hossein Rohban in the RIML Lab, with an undergraduate background in electrical engineering.</p>
-            <p>Mathematics is central to my preparation. I have designed homework for <strong>Linear Algebra and Engineering Mathematics</strong>, designed homework and exams for Signals &amp; Systems, and served as Head Teaching Assistant for Deep Reinforcement Learning and Communication Systems. My studies and projects connect probabilistic inference, optimization, search, and representation learning.</p>
-            <p>My current research concerns backdoor detection in language models and semantic calibration after fine-tuning; my undergraduate thesis studied machine unlearning. Across these problems, I am interested in what can be inferred from available information, which assumptions make an approach valid, and how uncertainty and computational cost affect the conclusions.</p>
+            <p>I study uncertainty and the reliability of learned models. My current work concerns <a href="research.html#backdoors">backdoor detection in language models</a> and <a href="research.html#calibration">semantic calibration after fine-tuning</a>; my undergraduate thesis examined <a href="research.html#unlearning">machine unlearning</a>.</p>
+            <p>I am advised by Mohammad Hossein Rohban in the RIML Lab at Sharif, and work remotely with Amin Gohari on the CUHK calibration project. Both current projects have manuscripts in preparation for planned ICML submission.</p>
+            <p>My central interest is mathematical: what does the available information let a learner infer, and how should that uncertainty affect its next decision? I want to connect statistical inference with search and sequential decision-making, building on my electrical-engineering background.</p>
           </div>
-          <aside class="contact" aria-label="Contact and profiles">
-            <p class="contact-label">Contact</p>
-            <a class="email" href="mailto:toroghipouya@gmail.com">toroghipouya@gmail.com</a>
-            <div class="profile-links"><a href="https://github.com/pouyatoroghi">GitHub</a><a href="https://linkedin.com/in/pouyatoroghi">LinkedIn</a></div>
-            <a class="cv-link" href="assets/CV_Toroghi_Oct2026.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
-          </aside>
+          <section class="preparation-summary" aria-labelledby="preparation-title">
+            <h2 id="preparation-title">Mathematical preparation</h2>
+            <ul class="evidence-list">
+              <li><strong>Linear Algebra &amp; Engineering Mathematics:</strong> teaching assistant, with homework-design responsibilities.</li>
+              <li><strong>Signals &amp; Systems:</strong> homework and exam design; <strong>Deep Reinforcement Learning:</strong> head teaching assistant.</li>
+              <li><strong>B.Sc. at Sharif:</strong> 18.47/20, ranked 18th of 137. Admitted to the M.Sc. through the Exceptional Talents Initiative.</li>
+            </ul>
+            <p><a href="background.html">Education and teaching details</a></p>
+          </section>
         </div>
-        <div class="reading-section">
-          <h2 id="section-nav-1">PhD interests</h2>
-          <p>I want to pursue research that combines mathematical analysis with careful experiments. My interests extend across learning theory and optimization, statistical inference, reinforcement learning, structured reasoning, generative models, and the reliability of adaptive systems. The connections between these fields matter to me: a question about confidence can become a question about decision-making, and a question about representation can change how a system searches.</p>
-          <p>My long-term ambition is to contribute to general intelligence. I want to understand how systems can acquire reusable abstractions, assess their own reasoning, and revise what they have learned. My <a href="question.html">long-term questions</a> set out these ambitions and how I hope to begin working toward them.</p>
+      </section>
+      <section class="section" aria-labelledby="section-nav-1">
+        <h2 id="section-nav-1">Research interests</h2>
+        <p class="page-lead">My closest PhD directions are uncertainty under adaptation, reasoning under limited computation, and controlled model revision. I am also interested in the learning-theoretic and optimization questions these problems raise. My <a href="research.html#phd-directions">research page</a> sets out possible starting problems; my <a href="question.html">long-term questions</a> explain the broader ambition toward general intelligence.</p>
+      </section>
+      <section class="section" aria-labelledby="selected-notes-title">
+        <h2 id="selected-notes-title">Selected mathematical exposition</h2>
+        <div class="project-list">
+          <article class="project"><h3><a href="note-off-policy.html">What can historical decisions tell us?</a></h3><p>A sequential estimator, its exact bias, and a two-environment lower bound for policy evaluation with poor coverage.</p></article>
+          <article class="project"><h3><a href="note-adaptive-calibration.html">What does an adaptive experiment identify?</a></h3><p>A matrix confidence bound and a sensor example showing why many measurements can leave a parameter contrast unknown.</p></article>
         </div>
-        <p class="phd-note">I am seeking PhD opportunities beginning in <strong>Fall 2027</strong>.</p>
-        <div class="page-links"><a href="research.html#phd-directions">Directions for doctoral research</a><a href="background.html">Mathematical preparation</a><a href="notes.html">Mathematical notes and derivations</a><a href="projects.html">Selected studies and projects</a></div>
+        <p class="full-cv">These are worked expositions of established methods, with stated assumptions and reproducible model checks. <a href="notes.html">All mathematical notes</a>.</p>
       </section>
     </main>
-    <aside class="page-outline" aria-label="Page contents"><div class="outline-inner"><p class="outline-label">On this page</p><div class="outline-links"><a href="#section-nav-1">PhD interests</a></div><div class="outline-more"><p class="outline-label">Further reading</p><a href="notes.html">Mathematical notes</a><a href="question.html">Long-term questions</a><a href="assets/CV_Toroghi_Oct2026.pdf">Full curriculum vitae ↗</a></div></div></aside>
-    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated October 2026</p><a href="research.html">Research <span aria-hidden="true">→</span></a></footer>
+    <aside class="page-outline" aria-label="Page contents"><div class="outline-inner"><p class="outline-label">On this page</p><div class="outline-links"><a href="#preparation-title">Mathematical preparation</a><a href="#section-nav-1">Research interests</a><a href="#selected-notes-title">Selected mathematical exposition</a></div><div class="outline-more"><p class="outline-label">Further reading</p><a href="notes.html">Mathematical notes</a><a href="question.html">Long-term questions</a><a href="assets/CV_Toroghi_Oct2026.pdf">Full curriculum vitae ↗</a></div></div></aside>
+    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated November 2026</p><a href="research.html">Research <span aria-hidden="true">→</span></a></footer>
   </div>
 </body>
 </html>

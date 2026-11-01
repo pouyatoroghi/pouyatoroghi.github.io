@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script src="theme.js?v=16e68cf4627a"></script>
-  <link rel="stylesheet" href="styles.css?v=89c145871a2b">
+  <link rel="stylesheet" href="styles.css?v=2ad703e3087f">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -44,35 +44,34 @@
       </nav>
     <main id="main" tabindex="-1" class="questions-page">
       <section class="page-intro" aria-labelledby="page-title">
-        <p class="page-owner"><a href="index.html">Mohammad Pouya Toroghi</a></p>
         <h1 id="page-title" class="question-title">Long-term research questions</h1>
         <p class="entry-context">Ambitions I want to pursue through doctoral research and beyond</p>
-        <div class="page-lead"><p>My long-term ambition is to contribute to artificial general intelligence through a deeper mathematical understanding of learning and reasoning. I am especially drawn to the possibility that ideas from inference, optimization, and structured search can explain how systems acquire knowledge, use it in unfamiliar settings, and revise it when necessary.</p><p>The questions below describe what I want to work toward. Each connects a broad ambition to problems I can begin studying through my existing research and mathematical preparation.</p></div>
+        <div class="page-lead"><p>My long-term ambition is to contribute to artificial general intelligence by understanding how a system can assess, extend, and revise its own reasoning. I use search over partial solutions as a working perspective on this problem, rather than assuming it is a complete account of intelligence.</p><p>The four questions below connect that ambition to bounded problems I would like to investigate. They are research interests, not established solutions or claims of novelty.</p></div>
         <blockquote class="central-question">What mathematical principles let systems reason, generalize, and revise their knowledge reliably?</blockquote>
       </section>
       <section class="reading-section" aria-labelledby="reasoning-title">
         <h2 id="reasoning-title">Reasoning as search under limited computation</h2>
         <p><span class="research-question">Can general-purpose reasoning become a principled allocation of limited computation?</span> I view reasoning as search over partial solutions. I want to understand how calibrated assessments of intermediate states can guide that search, distinguishing local validity, the probability of eventual success, and the expected benefit of further computation.</p>
-        <p>My calibration research, reinforcement learning background, and program-synthesis projects give me concrete ways into this question. I want to work toward systems that can evaluate and redirect their reasoning on unfamiliar problems, while understanding when their evaluations fail and which assumptions their decisions require.</p>
+        <p>A first setting I would like to study is program synthesis with an execution-based verifier and a fixed search budget. A useful evaluator must distinguish promising branches, not merely be calibrated on average: a constant base-rate forecast can be calibrated and still give no ranking. I would compare learned guidance with unguided search and fixed heuristics at matched evaluation cost, measuring valid solutions and failure cases. The continuation policy and remaining budget must be specified when defining a branch's probability of success.</p>
       </section>
       <section class="reading-section" aria-labelledby="abstraction-title">
         <h2 id="abstraction-title">Abstractions that support new discoveries</h2>
         <p><span class="research-question">Can a system learn abstractions that remain useful when the problem changes?</span> A mathematical abstraction can expose common structure across problems that initially look unrelated. I want to understand how learning systems might discover similarly reusable representations and compose them in settings beyond their training experience.</p>
-        <p>Symbolic regression, program synthesis, and generative modeling motivate this interest. My longer-term aim is to help develop systems that contribute to mathematical and scientific discovery. I want to begin by studying which representations and assumptions make transfer possible, and how to distinguish reusable structure from success on familiar patterns.</p>
+        <p>My program-synthesis and symbolic-regression projects suggest a starting point: learn a library of reusable components, then test it on held-out compositions. I would compare it with a fixed library at matched search cost and account for the cost of learning the library. Transfer to genuinely new compositions, and failures under changed primitives, would help distinguish useful abstraction from retrieval of familiar solutions. The longer-term aim is systems that assist mathematical and scientific discovery.</p>
       </section>
       <section class="reading-section" aria-labelledby="reliability-title">
         <h2 id="reliability-title">Reliable learning in a changing world</h2>
         <p><span class="research-question">Can a learning system remain statistically trustworthy as its data, decisions, and behavior change?</span> I want to study uncertainty estimates that remain useful through distribution shifts, adaptation, and self-directed data collection. My semantic-calibration research provides a starting point; my security work makes hidden failures a particular concern.</p>
-        <p>The ambition is a system that improves through experience while retaining a meaningful account of the evidence behind its predictions. I want to understand which forms of reliability are attainable for particular decisions, what feedback they require, and where information or computational limits make the desired guarantees impossible.</p>
+        <p>I would begin with a specified source of shift and a limited stream of correctness labels. The question is how feedback frequency constrains a decision-level guarantee, such as error among accepted answers. Calibration, prediction-set coverage, and selective error are different targets; success on one does not establish the others. The ambition requires knowing when reliability is unattainable as well as designing methods where the assumptions permit it.</p>
       </section>
       <section class="reading-section" aria-labelledby="revision-title">
         <h2 id="revision-title">Learning that can revise and forget</h2>
         <p><span class="research-question">Can a system learn continuously while preserving control over what it retains, revises, and forgets?</span> My unlearning research motivates a broader goal: systems that incorporate new evidence, correct harmful behavior, and remove specified data influence while preserving useful knowledge.</p>
-        <p>I want to study the mathematical conditions under which these objectives are compatible and the information and computation they require. This connects learning dynamics, privacy, security, and continual adaptation. My aim is to make correction and forgetting principled parts of learning, with effects and costs that can be stated precisely and assessed.</p>
+        <p>A first problem is to characterize deletion in a tractable learning model under explicit limits on stored training information. I would compare the updated model with retraining on the retained data, measuring both predictive utility and the relevant distributional discrepancy. In federated settings, communication and retained client state add constraints. Passing a membership-inference test is useful evidence, but cannot by itself certify equivalence to retraining.</p>
       </section>
       <section class="reading-section" aria-labelledby="commitment-title">
         <h2 id="commitment-title">How I want to pursue these questions</h2>
-        <p>I want to build toward these ambitions through sustained theoretical and empirical work. During a PhD, I aim to develop precise formulations, proofs or counterexamples where appropriate, and experiments that distinguish competing explanations. My immediate <a href="research.html#phd-directions">research directions</a> offer several ways to begin; the common purpose is to understand the mathematical structure that makes intelligent behavior possible and reliable.</p>
+        <p>My <a href="research.html#phd-directions">PhD directions</a> identify where my current preparation gives me a starting point. I want to develop precise models, prove what they permit or rule out, and test whether their assumptions explain observed behavior. I expect the questions to change through collaboration and evidence; the ambition is long-term, while a useful first result may be deliberately narrow.</p>
       </section>
       <section class="reading-section related-reading" aria-labelledby="reading-title">
         <h2 id="reading-title">Related reading</h2>
@@ -89,7 +88,7 @@
       </section>
     </main>
     <aside class="page-outline" aria-label="Page contents"><div class="outline-inner"><p class="outline-label">On this page</p><div class="outline-links"><a href="#reasoning-title">Reasoning as search under limited computation</a><a href="#abstraction-title">Abstractions that support new discoveries</a><a href="#reliability-title">Reliable learning in a changing world</a><a href="#revision-title">Learning that can revise and forget</a><a href="#commitment-title">How I want to pursue these questions</a><a href="#reading-title">Related reading</a></div><div class="outline-more"><p class="outline-label">Further reading</p><a href="notes.html">Mathematical notes</a><a href="question.html">Long-term questions</a><a href="assets/CV_Toroghi_Oct2026.pdf">Full curriculum vitae ↗</a></div></div></aside>
-    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated October 2026</p><a href="research.html">Current research <span aria-hidden="true">→</span></a></footer>
+    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated November 2026</p><a href="research.html">Current research <span aria-hidden="true">→</span></a></footer>
   </div>
 </body>
 </html>

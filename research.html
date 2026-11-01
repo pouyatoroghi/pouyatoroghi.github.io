@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script src="theme.js?v=16e68cf4627a"></script>
-  <link rel="stylesheet" href="styles.css?v=89c145871a2b">
+  <link rel="stylesheet" href="styles.css?v=2ad703e3087f">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -45,50 +45,52 @@
     <main id="main" tabindex="-1">
       <div class="research-page">
         <section class="page-intro" aria-labelledby="page-title">
-          <p class="page-owner"><a href="index.html">Mohammad Pouya Toroghi</a></p>
           <h1 id="page-title">Research</h1>
-          <div class="page-lead"><p>My research connects questions about inference, uncertainty, and the effects of modifying a learned model. Current projects concern language-model security and calibration; earlier work examined machine unlearning. I am interested in the assumptions that make these problems tractable and in the limits of the evidence available to answer them.</p></div>
+          <div class="page-lead"><p>My current research asks how to detect hidden behavior in language models and how to assess the correctness of their responses after fine-tuning. Earlier, I studied the removal of training-data influence. Below I distinguish my contributions to these projects from the questions I would like to pursue during a PhD.</p></div>
           <div class="page-links"><a href="#backdoors">Research experience</a><a href="#phd-directions">PhD directions</a><a href="question.html">Long-term questions</a></div>
         </section>
         <article class="research-entry" id="backdoors">
           <div class="entry-heading"><h2 id="section-nav-1">Backdoor detection in large language models</h2><span class="entry-date">Sept. 2024–present</span></div>
           <p class="entry-context">M.Sc. research · RIML Lab, Sharif University of Technology</p>
-          <p>The starting point of my master's research is an inference problem: what can full access to a model reveal about a backdoor when the trigger distribution is unknown? I am developing a search-based detection method together with partial estimation of that distribution under explicit assumptions.</p>
-          <p>I study how white-box information can guide candidate-trigger discovery and support the identification of backdoored models. Evaluation under controlled attack settings examines detection performance, the usefulness of estimated trigger information, and the limitations imposed by the assumptions.</p>
+          <p><strong>Problem.</strong> What can full access to a model reveal about a backdoor when the trigger distribution is unknown? </p>
+          <p><strong>My contribution.</strong> I am developing a search-based detection method together with partial estimation of that distribution under explicit assumptions.</p>
+          <p><strong>Evaluation.</strong> I study how white-box information can guide candidate-trigger discovery and support the identification of backdoored models. Evaluation under controlled attack settings examines detection performance, the usefulness of estimated trigger information, and the limitations imposed by the assumptions.</p>
           <p class="supervision">Advisor: Mohammad Hossein Rohban</p>
+          <p class="research-status">Ongoing M.Sc. thesis · Manuscript in preparation for planned ICML submission</p>
         </article>
         <article class="research-entry" id="calibration">
           <div class="entry-heading"><h2 id="section-nav-2">Calibration-aware fine-tuning</h2><span class="entry-date">Dec. 2025–present</span></div>
           <p class="entry-context">Remote research project with CUHK</p>
-          <p>This project studies the relationship between confidence and semantic correctness in long-form generation, especially after fine-tuning with limited data or under distribution shift. I contributed to the problem formulation and am developing training-time methods that use in-domain supervision to align confidence with empirical response correctness.</p>
-          <p>The work examines calibration, generation accuracy, and inference cost together. My contributions include method development, baseline comparisons, and the training and evaluation needed to assess these trade-offs. The aim is useful uncertainty estimation without relying on extensive inference-time sampling.</p>
+          <p><strong>Problem.</strong> This project studies the relationship between confidence and semantic correctness in long-form generation, especially after fine-tuning with limited data or under distribution shift. </p>
+          <p><strong>My contribution.</strong> I contributed to the problem formulation and am developing training-time methods that use in-domain supervision to align confidence with empirical response correctness.</p>
+          <p><strong>Evaluation.</strong> The work examines calibration, generation accuracy, and inference cost together. My contributions include method development, baseline comparisons, and the training and evaluation needed to assess these trade-offs. The aim is useful uncertainty estimation without relying on extensive inference-time sampling.</p>
           <p class="supervision">Advisor: Amin Gohari</p>
-          <p class="research-status">Ongoing work · Manuscript in preparation</p>
+          <p class="research-status">Ongoing research · Manuscript in preparation for planned ICML submission</p>
         </article>
         <article class="research-entry" id="unlearning">
           <div class="entry-heading"><h2 id="section-nav-3">Machine unlearning for neural networks</h2><span class="entry-date">Sept. 2023–Sept. 2024</span></div>
           <p class="entry-context">Completed B.Sc. research · Sharif University of Technology</p>
-          <p>My undergraduate thesis examined the removal of training-data influence, including in distributed learning. I compared existing algorithms and developed and evaluated a federated unlearning approach.</p>
-          <p>A central part of the work was specifying how its effects should be assessed. I combined retained-task performance and forgetting measures with membership-inference and poisoning attacks before and after unlearning. This treated utility, privacy, and security as distinct criteria, providing several forms of evidence about a method's effectiveness and limitations.</p>
+          <p><strong>Problem and contribution.</strong> My undergraduate thesis examined the removal of training-data influence, including in distributed learning. I compared existing algorithms and developed and evaluated a federated unlearning approach.</p>
+          <p><strong>Evaluation.</strong> I designed an empirical protocol to assess the effects of unlearning. I combined retained-task performance and forgetting measures with membership-inference and poisoning attacks before and after unlearning. These tests assess different properties: low attack success alone does not establish that the influence of the deleted data has been removed.</p>
           <p class="supervision">Advisors: Arash Amini and Stefano Rini</p>
         </article>
       </div>
       <section class="section" id="phd-directions" aria-labelledby="directions-title">
         <div class="section-heading"><h2 id="directions-title">Directions for doctoral research</h2></div>
-        <div class="page-lead"><p>I want to pursue mathematical questions across learning and AI, using experiments to test and refine the analysis. These are prospective directions connected by my preparation in electrical engineering, inference, and decision-making; I expect the specific problems to develop through collaboration during a PhD.</p></div>
+        <div class="page-lead"><p>My closest starting points are uncertainty under adaptation, search with learned evaluators, and model revision. I am interested in theory-focused work that makes assumptions explicit and connects guarantees to observable behavior. The following are prospective questions, not claims of new results.</p></div>
         <div class="project-list">
-          <article class="project"><h3>Learning theory and optimization</h3><p>I want to study how problem structure and the optimization procedure influence generalization. Stability, regularization, data efficiency, and the effects of training interventions interest me across model classes. My calibration and unlearning research provide concrete settings in which to connect mathematical analysis with experiments that test the relevance of its assumptions.</p></article>
-          <article class="project"><h3>Probabilistic inference and uncertainty</h3><p>I want to understand what a model's uncertainty measures and when that information remains useful under distribution shift or scarce feedback. My calibration research, Bayesian-network inference, and mixture-model projects connect to this interest. I am particularly drawn to statistical guarantees whose assumptions reflect the information actually available to the learner.</p></article>
-          <article class="project"><h3>Reinforcement learning and sequential decisions</h3><p>Value estimation, exploration, and planning connect my signals-and-systems background with my theoretical study of reinforcement learning. I want to study how approximation error and uncertainty affect decisions over time, and how limits on data and computation should influence a learning strategy. My Deep Reinforcement Learning teaching and projects provide a foundation for this direction.</p></article>
-          <article class="project"><h3>Reasoning and structured representations</h3><p>I want to connect learned representations with search, constraints, and executable structure. Program synthesis, symbolic regression, and constraint solving have given me different perspectives on this connection. I would like to study how abstraction and intermediate evaluation affect compositional generalization and the resources needed to solve an unfamiliar problem.</p></article>
-          <article class="project"><h3>Representation learning and generative modeling</h3><p>I am interested in what structure representations capture and which information learning objectives preserve. PCA, expectation-maximization, autoencoders, variational models, and diffusion provide several starting points. I want to study connections among latent-variable inference, optimization, and generalization, including questions motivated by signals, speech, and vision.</p></article>
-          <article class="project"><h3>Robustness and principled model revision</h3><p>My security and unlearning work motivate questions about identifying hidden failures and changing model behavior in a controlled way. I want to study what can be inferred from model access, which guarantees a specified threat model permits, and how interventions affect utility, privacy, and security. This also connects to my interest in explanations that can be tested against model behavior.</p></article>
+          <article class="project"><h3>Uncertainty under adaptation</h3><p>When fine-tuning changes both predictions and confidence, which reliability properties can be preserved with limited labels? My calibration project motivates studying the distinction between average calibration and the reliability of predictions selected for a downstream decision.</p></article>
+          <article class="project"><h3>Search and sequential decisions</h3><p>How should a search procedure allocate a fixed budget when its evaluator is imperfect? My work with program synthesis and search, and my RL preparation, motivate studying how evaluator error affects the probability of finding a valid solution.</p></article>
+          <article class="project"><h3>Controlled model revision</h3><p>How much information about training is needed to remove specified data influence without retraining from scratch? My unlearning work motivates comparisons against a retrained reference, separating distributional guarantees from empirical attack resistance.</p></article>
+          <article class="project"><h3>Learning theory and optimization</h3><p>How do restricted parameter updates change stability and generalization? Fine-tuning and unlearning provide concrete interventions to study, beginning with models whose optimization dynamics can be analyzed rather than assuming conclusions transfer immediately to large networks.</p></article>
+          <article class="project"><h3>Statistical identification and security</h3><p>Under a specified family of attacks, what can white-box access reveal that behavioral queries cannot? My thesis motivates characterizing the assumptions and search budget needed to distinguish a backdoor from benign rare behavior.</p></article>
+          <article class="project"><h3>Representation and generative modeling</h3><p>When does a representation preserve the information required for a new inference task? My signal-processing and latent-variable projects motivate studying this first in tractable observation models, where reconstruction quality and uncertainty can be evaluated separately.</p></article>
         </div>
       </section>
       <div class="page-links"><a href="notes.html">Mathematical notes and derivations</a></div>
     </main>
     <aside class="page-outline" aria-label="Page contents"><div class="outline-inner"><p class="outline-label">On this page</p><div class="outline-links"><a href="#section-nav-1">Backdoor detection in large language models</a><a href="#section-nav-2">Calibration-aware fine-tuning</a><a href="#section-nav-3">Machine unlearning for neural networks</a><a href="#directions-title">Directions for doctoral research</a></div><div class="outline-more"><p class="outline-label">Further reading</p><a href="notes.html">Mathematical notes</a><a href="question.html">Long-term questions</a><a href="assets/CV_Toroghi_Oct2026.pdf">Full curriculum vitae ↗</a></div></div></aside>
-    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated October 2026</p><a href="projects.html">Selected projects <span aria-hidden="true">→</span></a></footer>
+    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated November 2026</p><a href="projects.html">Selected projects <span aria-hidden="true">→</span></a></footer>
   </div>
 </body>
 </html>

@@ -25,6 +25,9 @@ jobs:
           mkdir _site
           cp -- *.html styles.css theme.js .nojekyll _site/
           cp -R assets _site/assets
+          mkdir _site/scripts
+          cp scripts/check-probability.py _site/scripts/
+          python3 _site/scripts/check-probability.py
           for file in robots.txt sitemap.xml; do
             if [ -f "$file" ]; then cp "$file" _site/; fi
           done

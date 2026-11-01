@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script src="theme.js?v=16e68cf4627a"></script>
-  <link rel="stylesheet" href="styles.css?v=89c145871a2b">
+  <link rel="stylesheet" href="styles.css?v=2ad703e3087f">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -44,9 +44,8 @@
       </nav>
     <main id="main" tabindex="-1">
       <section class="page-intro" aria-labelledby="page-title">
-        <p class="page-owner"><a href="index.html">Mohammad Pouya Toroghi</a></p>
         <h1 id="page-title">Selected studies and projects</h1>
-        <div class="page-lead"><p>These projects reflect the mathematical ideas I have worked with across machine learning and AI: inference over hidden variables, search over discrete structures, estimation of long-term value, and learning useful representations. Implementation and experiments have been ways to study these ideas in concrete settings.</p></div>
+        <div class="page-lead"><p>This page groups my implementation and empirical-study experience by mathematical problem. These projects are distinct from the thesis and collaborative research described on the <a href="research.html">Research page</a>; they show the methods I have worked with, without claiming new algorithms or theoretical results.</p></div>
         <div class="page-links"><a href="https://github.com/pouyatoroghi">GitHub profile</a><a href="research.html#phd-directions">Related PhD interests</a></div>
       </section>
       <article class="project-story" id="probabilistic-inference">
@@ -57,26 +56,26 @@
       <article class="project-story" id="reasoning">
         <h2 id="section-nav-2">Search, constraints, and structured reasoning</h2>
         <p>My classical AI work covered graph search, including A*, local and adversarial search, and constraint solving through backtracking, AC-3/AC-4, and CP-SAT. These methods connect reasoning about discrete possibilities with the use of structure to reduce a search space.</p>
-        <p>In program synthesis and neuro-symbolic projects, I worked with program generation and execution-based evaluation, symbolic regression, and reasoning methods including Tree of Thoughts and Monte Carlo tree search. I also built graph-based and retrieval-augmented reasoning pipelines. The connection that interests me is how representations, constraints, and evaluation shape the search for a solution.</p>
+        <p>In program synthesis and neuro-symbolic projects, I worked with program generation and execution-based evaluation, symbolic regression, and reasoning methods including Tree of Thoughts and Monte Carlo tree search. I also built graph-based and retrieval-augmented reasoning pipelines. Execution-based checks provide a concrete way to distinguish a plausible generated program from one that solves the specified task.</p>
       </article>
       <article class="project-story" id="reinforcement-learning">
         <h2 id="section-nav-3">Sequential decision-making and reinforcement learning</h2>
         <p>My reinforcement learning projects combined theoretical study with empirical evaluation. They span Monte Carlo and temporal-difference methods, Q-learning and SARSA, policy-gradient methods, and deep value-based and actor-critic algorithms such as DQN, PPO, SAC, and DDPG.</p>
-        <p>I extended this work to imitation learning, offline RL, multi-agent learning, hierarchical control, and exploration. The mathematical connections I want to pursue further concern value estimation, policy optimization, and learning from data whose distribution depends on the decisions an agent makes.</p>
+        <p>I extended this work to imitation learning, offline RL, multi-agent learning, hierarchical control, and exploration. For a worked theoretical treatment of the data-distribution issue, see the <a href="note-off-policy.html">off-policy evaluation note</a>.</p>
       </article>
       <article class="project-story" id="generative-models">
         <h2 id="section-nav-4">Representation learning and generative modeling</h2>
         <p>I worked with variational autoencoders, DDPMs, and latent diffusion, alongside models for vision, language, and temporal prediction. These projects exposed me to latent-variable modeling and iterative generation, and to different ways learned representations can support prediction and reconstruction.</p>
-        <p>Related work included LoRA and prefix tuning, representation learning, and attention visualization in vision-language models. I am interested in carrying this experience toward questions about what structure representations preserve, how they change during adaptation, and when they transfer to new tasks.</p>
+        <p>Related work included LoRA and prefix tuning, representation learning, and attention visualization in vision-language models. The <a href="note-denoising.html">denoising note</a> develops one related connection between signal estimation, scores, and posterior uncertainty.</p>
       </article>
       <article class="project-story" id="speech">
         <h2 id="section-nav-5">Signals, language, and generalization across conditions</h2>
         <p>I developed a Persian speech recognition system using a Conformer-Transducer architecture, with evaluation across speakers and acoustic conditions. The project connected my signals background to language modeling and to the practical consequences of variation in observed data.</p>
-        <p>Other work included text classification with bag-of-words and TF-IDF representations, classical classifiers, and Transformers. These applications complement my interests in inference and representation by providing concrete settings in which to examine the usefulness of a learned model.</p>
+        <p>Other work included text classification with bag-of-words and TF-IDF representations, classical classifiers, and Transformers. </p>
       </article>
     </main>
     <aside class="page-outline" aria-label="Page contents"><div class="outline-inner"><p class="outline-label">On this page</p><div class="outline-links"><a href="#section-nav-1">Probabilistic inference and latent-variable models</a><a href="#section-nav-2">Search, constraints, and structured reasoning</a><a href="#section-nav-3">Sequential decision-making and reinforcement learning</a><a href="#section-nav-4">Representation learning and generative modeling</a><a href="#section-nav-5">Signals, language, and generalization across conditions</a></div><div class="outline-more"><p class="outline-label">Further reading</p><a href="notes.html">Mathematical notes</a><a href="question.html">Long-term questions</a><a href="assets/CV_Toroghi_Oct2026.pdf">Full curriculum vitae ↗</a></div></div></aside>
-    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated October 2026</p><a href="background.html">Background <span aria-hidden="true">→</span></a></footer>
+    <footer><p>Mohammad Pouya Toroghi <span aria-hidden="true">·</span> Updated November 2026</p><a href="background.html">Background <span aria-hidden="true">→</span></a></footer>
   </div>
 </body>
 </html>

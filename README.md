@@ -27,7 +27,7 @@ GitHub documentation: [custom Pages workflows](https://docs.github.com/en/pages/
 - **Studies and projects in inference, search, decisions, and representation:** edit `projects.html`.
 - **Mathematical preparation, education, teaching, honors:** edit `background.html`.
 - **Mathematical notebook:** edit `notes.html` for the index; `note-pac-bayes.html`, `note-sequential.html`, `note-denoising.html`, and `note-floor-series.html` contain the full derivations. The original handwritten page is `assets/handwritten-floor-series.jpg`.
-- **Applied probability problems:** `note-off-policy.html` derives policy-evaluation bias, variance, and a coverage lower bound; `note-rare-events.html` derives a rare-event estimator and its asymptotic efficiency; `note-adaptive-calibration.html` develops a matrix confidence bound and its implications for sensor experiments. Run `python scripts/check-probability.py` to reproduce their deterministic numerical checks using only the Python standard library.
+- **Applied probability problems:** `note-off-policy.html` derives policy-evaluation bias, variance, and a coverage lower bound; `note-rare-events.html` derives a rare-event estimator and its asymptotic efficiency; `note-adaptive-calibration.html` develops a matrix confidence bound and its implications for sensor experiments. Run `python scripts/check-probability.py` to reproduce the deterministic checks for all seven notes and the three puzzles using only the Python standard library. These include exact finite-state enumeration, numerical integration, and rational-arithmetic floor-series enclosures; they support the proofs rather than replace them.
 - **Puzzles, hints, solutions:** edit `puzzles.html`; preserve the `<details>` and `<summary>` structure. See the mathematical typesetting instructions below when changing an expression.
 - **Four long-term research questions and related reading:** edit `question.html`.
 - **Colors, typography, spacing, responsive layouts:** edit `styles.css`. After changing it, update the `styles.css?v=...` revision in every HTML page so returning browsers request the new stylesheet.
@@ -83,3 +83,7 @@ The ignored `.qa` directory contains local checks and screenshots. With the HTTP
 ## Design references
 
 The redesign uses the direct biography, visible research descriptions, and immediate contact links typical of academic homepages. References included [Aleksander Madry](https://madry.mit.edu/), [Jacob Steinhardt](https://jsteinhardt.stat.berkeley.edu/), and the indexed content of [Chelsea Finn's homepage](https://ai.stanford.edu/~cbfinn/). Their text, photographs, and source code are not reused. No portrait is included, as requested.
+
+## Mathematical review, November 2026
+
+The notes state their result and scope before the proof. The review clarified fitted-propensity moment assumptions and the Gaussian tilt domain; added the exact fitted-value variance penalty and a matching two-point risk bound; made sensor non-identifiability explicit; and supplied counterexamples for score-based covariance estimates, unrestricted data-dependent PAC-Bayes priors, and empirical-variance substitution. The floor-series note now includes a rigorous truncation certificate. These are expository developments of the stated mathematics, not claims of new research results or independent peer review.

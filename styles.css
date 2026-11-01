@@ -329,3 +329,6 @@ var { font-family: var(--serif); }
 @media (min-width: 1600px) { main { font-size: 1.25rem; } }
 
 @media (max-width: 700px) { .introduction h1 { font-size: clamp(1.3rem, 5.8vw, 2rem); letter-spacing: -.02em; } }
+
+.note-result { margin-top: 24px; padding: 12px 16px; border-left: 3px solid var(--blue); background: var(--wash); font-size: .95em; }
+.note-result strong { color: var(--heading); }
